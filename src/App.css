@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Links */
+a {
+  color: #66b3ff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Título */
+h1 {
+  color: rgb(0, 0, 0);
+}
+
+/* Botões */
+button {
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(9, 83, 194);
+  color: rgb(255, 255, 255);
+}
