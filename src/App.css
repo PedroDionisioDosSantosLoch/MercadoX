@@ -27,3 +27,16 @@ button {
   background-color: rgb(9, 83, 194);
   color: rgb(255, 255, 255);
 }
+
+.cart-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: 0.3s;
+}
