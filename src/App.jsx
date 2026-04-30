@@ -7,6 +7,10 @@ import Cadastro from "./pages/Cadastro";
 import Loja from "./pages/Loja";
 import Dashboard from "./pages/Dashboard";
 
+import HomeContent from "./pages/DashboardPages/HomeContent"
+import Relatorios from "./pages/DashboardPages/Relatorios";
+import Usuarios from "./pages/DashboardPages/Usuarios";
+
 import CartButton from "./components/CartButton";
 import CartSidebar from "./components/CartSidebar";
 
@@ -38,7 +42,11 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/loja" element={<Loja />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<HomeContent />} />
+          <Route path="relatorios" element={<Relatorios />} />
+          <Route path="usuarios" element={<Usuarios />} />
+        </Route>
       </Routes>
     </>
   );

@@ -14,6 +14,15 @@ export default function CartSidebar({ isOpen, closeCart }) {
     </div>
   );
 
+  const FinalizarCompra = async () => {
+    alert('Compra finalizada! Total: R$ ' + getTotal().toFixed(2));
+    localStorage.setItem('vendidos', cart.length);
+    localStorage.setItem('totalVendas', getTotal().toFixed(2));
+    localStorage.setItem('itensVendidos', JSON.stringify(cart));
+    localStorage.setItem('dataVenda', new Date().toLocaleString());
+    closeCart();
+  };
+
   return (
     <Sidebar 
       visible={isOpen} 
@@ -93,8 +102,11 @@ export default function CartSidebar({ isOpen, closeCart }) {
                 backgroundColor: '#0f172a', 
                 border: 'none', 
                 borderRadius: '12px', 
-                padding: '15px' 
+                padding: '15px',
+                fontSize: '1rem',
+                fontWeight: '600',
               }} 
+              onClick={FinalizarCompra}
             />
           </div>
         )}

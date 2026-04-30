@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    color: white;
+    padding: 20px;
+    border-top-right-radius: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Link {
+    color: rgb(198, 199, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s all;
+}
+
+.Link:hover {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.Link:active {
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.Voltar {
+    margin-top: 20px;
+    padding: 10px 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all;
+    bottom: 0;
+}
+
+.Voltar h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.Voltar:hover {
+    background: #1e40af;
+}

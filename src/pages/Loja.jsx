@@ -3,6 +3,7 @@ import { useCart } from '../contexts/CartContext'
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
 import { Sidebar } from 'primereact/sidebar'
+import { useNavigate } from 'react-router-dom'
 
 export default function Loja() {
   const [produtos, setProdutos] = useState([])
@@ -10,7 +11,8 @@ export default function Loja() {
   const [selectedProduct, setSelectedProduct] = useState(null)
 
   const { addItem } = useCart()
-
+  const navigate = useNavigate()
+  
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
@@ -42,6 +44,7 @@ export default function Loja() {
   )
 
   return (
+    
     <div
       style={{
         minHeight: '100vh',
@@ -50,6 +53,8 @@ export default function Loja() {
         fontFamily: '-apple-system, system-ui, sans-serif',
       }}
     >
+      <Button icon="pi pi-align-justify" style={{position: 'fixed'}} onClick={() => navigate('/dashboard')} />
+
       <Sidebar
         visible={visible}
         onHide={() => setVisible(false)}

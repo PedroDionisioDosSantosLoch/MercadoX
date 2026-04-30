@@ -1,55 +1,30 @@
+import { Link, Outlet, Route } from "react-router-dom";
+import './dashboard.css'
+import { useNavigate } from "react-router-dom";
+
 export default function Dashboard() {
+  const navigate = useNavigate();
+
+  const handleVoltar = () => {
+    navigate('../loja');
+  };
+
   return (
-    <div style={styles.container}>
-      <aside style={styles.sidebar}>
+    <div className="container">
+      <aside className="sidebar">
         <h2>Painel</h2>
-        <p>🏠 Home</p>
-        <p>📊 Relatórios</p>
-        <p>👤 Usuários</p>
-        <p>⚙️ Config</p>
+        <nav style={{ display: 'flex', flexDirection: 'column', gap: '10px'}}>
+          <Link to="/dashboard" className="Link">Home</Link>
+          <Link to="/dashboard/relatorios" className="Link">Relatórios</Link>
+          <Link to="/dashboard/usuarios" className="Link">Usuários</Link>
+        </nav>
+
+        <button className="Voltar" onClick={handleVoltar}><h1>Voltar Loja</h1></button>
       </aside>
 
-      <main style={styles.content}>
-        <h1>Dashboard</h1>
-
-        <div style={styles.cards}>
-          <div style={styles.card}>💰 Vendas: R$ 5.000</div>
-          <div style={styles.card}>👤 Clientes: 120</div>
-          <div style={styles.card}>📦 Pedidos: 38</div>
-          <div style={styles.card}>📈 Lucro: R$ 2.300</div>
-        </div>
+      <main className="content">
+        <Outlet />
       </main>
     </div>
-  )
-}
-
-const styles = {
-  container: {
-    display: 'flex',
-    minHeight: '100vh',
-    background: '#f5f5f5'
-  },
-  sidebar: {
-    width: '220px',
-    background: '#111827',
-    color: 'white',
-    padding: '20px'
-  },
-  content: {
-    flex: 1,
-    padding: '20px'
-  },
-  cards: {
-    display: 'flex',
-    gap: '15px',
-    flexWrap: 'wrap',
-    marginTop: '20px'
-  },
-  card: {
-    background: 'white',
-    padding: '20px',
-    borderRadius: '10px',
-    minWidth: '200px',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-  }
+  );
 }
