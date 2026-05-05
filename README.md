@@ -1,2 +1,4 @@
 # MercadoX
 
+O MercadoX é um sistema simples de gerenciamento de mercado, desenvolvido para facilitar o controle de produtos, estoque e vendas. A proposta do projeto é oferecer uma solução prática e organizada, permitindo cadastrar itens, visualizar informações, atualizar quantidades e registrar vendas de forma eficiente.
+Ele pode ser utilizado tanto como uma ferramenta básica para pequenos comércios quanto como um projeto acadêmico, ajudando no aprendizado de desenvolvimento de sistemas. A estrutura é pensada para ser clara e de fácil manutenção, possibilitando futuras melhorias, como integração com banco de dados, relatórios mais completos ou até uma interface mais avançada.
