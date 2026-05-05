@@ -16,10 +16,10 @@ export default function CartButton({ openCart }) {
         zIndex: 1000
       }}
     >
-      {/* ÍCONE DO PRIME */}
+     
       <i className="pi pi-shopping-cart" style={{ fontSize: "24px" }}></i>
 
-      {/* BADGE (bolinha com número) */}
+      
       {totalItems > 0 && (
         <span
           style={{
